@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mark Attendance - Attendance Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="nav"></div>
+<main>
+<div class="sticky-head">
+<h1>Mark Attendance</h1>
+<p class="sub">Choose a date and subject, mark each student, then press Save.</p>
+<div class="toolbar">
+  <label>Date <input type="date" id="date"></label>
+  <input type="search" id="search" placeholder="Search name or A-1">
+  <label class="subj">Subject <select id="subject"></select></label>
+  <label class="cls">Class <select id="classFilter"><option value="all">All classes</option><option value="A">Class A</option><option value="B">Class B</option></select></label>
+  <button class="btn light" id="allPresent">Mark all present</button>
+  <button class="btn" id="save">Save attendance</button>
+  <span id="msg"></span>
+</div>
+</div>
+<p id="counts"></p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Roll No</th><th>Name</th><th>Class</th><th>Status</th></tr></thead>
+  <tbody id="tbody"></tbody>
+</table></div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/attendance.js"></script>
+</body></html>

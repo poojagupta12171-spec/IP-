@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Details - Attendance Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="nav"></div>
+<main>
+<div id="content" hidden>
+  <p><a href="students.html" id="back">&larr; Back to students</a></p>
+  <h1 id="name"></h1>
+  <p class="sub" id="info"></p>
+  <p class="amber" id="warn"></p>
+  <div class="toolbar"><label>Showing <select id="view"></select></label></div>
+  <div class="grid stats" style="grid-template-columns:repeat(4,1fr)">
+    <div class="box stat"><b id="overall">0%</b><span id="overallLabel">Overall attendance</span></div>
+    <div class="box stat green"><b id="pc">0</b><span>Present</span></div>
+    <div class="box stat red"><b id="ac">0</b><span>Absent</span></div>
+    <div class="box stat amber"><b id="lc">0</b><span>Late</span></div>
+  </div>
+  <div class="grid two">
+    <div class="box"><h2>Attendance by subject</h2><div id="subjects"></div><p class="note" id="subjectNote"></p></div>
+    <div class="tablewrap"><table>
+      <caption id="monthlyCap"></caption>
+      <thead><tr><th>Month</th><th>P</th><th>A</th><th>L</th><th>%</th><th></th></tr></thead>
+      <tbody id="monthly"></tbody>
+    </table></div>
+  </div>
+  <div class="section toolbar"><h2 style="margin:0" id="historyHead">Attendance history</h2><select id="filter"></select></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Date</th><th>Day</th><th>Subject</th><th>Status</th></tr></thead>
+    <tbody id="history"></tbody>
+  </table></div>
+</div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/student-details.js"></script>
+</body></html>

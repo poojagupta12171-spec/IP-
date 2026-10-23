@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard - Attendance Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="nav"></div>
+<main>
+<h1>Dashboard</h1>
+<p class="sub" id="today"></p>
+<div class="toolbar"><label>View attendance for <select id="subject"></select></label></div>
+<div class="grid stats">
+  <div class="box stat"><b id="total">0</b><span>Total students</span></div>
+  <div class="box stat green"><b id="present">0</b><span id="lblPresent">Present today</span></div>
+  <div class="box stat red"><b id="absent">0</b><span id="lblAbsent">Absent today</span></div>
+  <div class="box stat amber"><b id="late">0</b><span id="lblLate">Late today</span></div>
+  <div class="box stat"><b id="overall">0%</b><span id="lblOverall">Overall attendance</span></div>
+</div>
+<div class="grid two">
+  <div class="box"><h2 id="overviewHead">Today's overview</h2><div id="overview"></div></div>
+  <div class="box"><h2 id="alertHead">Students near or below 75%</h2><div id="alerts"></div></div>
+</div>
+<div class="box section">
+  <h2 id="heatHead">Attendance calendar (each row is one week, Mon to Fri)</h2>
+  <div class="heat" id="heat"></div>
+  <p class="note">Dark green = most students present. Red = low turnout. Grey = nothing recorded. Hover a square for the date.</p>
+</div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/dashboard.js"></script>
+</body></html>

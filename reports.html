@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reports - Attendance Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="nav"></div>
+<main>
+<h1>Reports</h1>
+<p class="sub">Pick a month and a subject (or overall) to see the summary and download it as CSV.</p>
+<div class="toolbar">
+  <label>Month <select id="month"></select></label>
+  <label>Report for <select id="subject"></select></label>
+  <button class="btn" id="export">Export CSV</button>
+</div>
+<div class="box" id="summary"></div>
+<h2 class="section" id="studentHead">Student-wise attendance</h2>
+<div class="tablewrap"><table>
+  <thead><tr><th>Roll No</th><th>Name</th><th>Class</th><th>Present</th><th>Absent</th><th>Late</th><th>%</th><th></th></tr></thead>
+  <tbody id="tbody"></tbody>
+</table></div>
+<h2 class="section" id="subjectHead">Subject-wise attendance</h2>
+<div class="tablewrap"><table>
+  <thead><tr><th>Subject</th><th>Students with records</th><th>Present</th><th>Absent</th><th>Late</th><th>Average</th><th></th></tr></thead>
+  <tbody id="subjects"></tbody>
+</table></div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/reports.js"></script>
+</body></html>
